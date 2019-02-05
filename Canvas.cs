@@ -62,7 +62,7 @@ namespace OOPFundamental
             */
 
 
-            ball1 = new Ball(50, 50, Color.Red);
+            ball1 = new Ball(50, 50, Color.Red, 5, this.Height);
             Controls.Add(ball1._Boby);
 
             //!! Create a timer and used as ticker
