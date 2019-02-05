@@ -15,7 +15,7 @@ namespace OOPFundamental
 {
     public partial class Canvas : Form
     {
-        Ball ball1;
+        Ball ball1, ball2, ball3;
 
         public Canvas()
         {
@@ -65,6 +65,12 @@ namespace OOPFundamental
             ball1 = new Ball(50, 50, Color.Red, 5, this.Height);
             Controls.Add(ball1._Boby);
 
+            ball2 = new Ball(20, 50, Color.Lime, 3, this.Height);
+            Controls.Add(ball2._Boby);
+
+            ball3 = new Ball(50, 30, Color.Blue, 7, this.Height);
+            Controls.Add(ball3._Boby);
+
             //!! Create a timer and used as ticker
             Timer timer = new Timer();
             timer.Interval = 1000 / 60;     // 60 fps
@@ -76,8 +82,8 @@ namespace OOPFundamental
         private void Timer_Tick(object sender, EventArgs e)
         {
             ball1.Update();
-
-            
+            ball2.Update();
+            ball3.Update();
         }
     }
 }
